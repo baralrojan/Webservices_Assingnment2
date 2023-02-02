@@ -14,7 +14,7 @@ enum DogApI_Response{
 class DogAPI_Helper {
     static let urlString = "https://dog.ceo/api/breeds/list/all"
   
-    static func fetchDogData() async throws -> DogBreed {
+    static func fetchDogData() async throws -> DogsResponse {
         
         guard
             let url = URL(string: urlString)
@@ -24,7 +24,7 @@ class DogAPI_Helper {
         
         let decoder = JSONDecoder()
         
-        let results = try decoder.decode(DogBreed.self, from:data)
+        let results = try decoder.decode(DogsResponse.self, from:data)
         
         return results
     }

@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct DogBreed: Decodable {
+struct DogsResponse: Decodable {
   let message: [String: [String]]
 }
 
-struct Breed: Decodable {
+struct Dog {
   let name: String
 }
-

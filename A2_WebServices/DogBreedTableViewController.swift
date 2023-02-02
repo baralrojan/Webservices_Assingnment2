@@ -8,7 +8,8 @@
 import UIKit
 
 class DogBreedTableViewController: UITableViewController {
-    var allDog : [DogBreed] = []
+    //var allDog : [DogBreed]!
+    var dogs = [Dog]()
 
     //var dogBredd : DogBreed
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class DogBreedTableViewController: UITableViewController {
         Task{
             do{
                 let results = try await DogAPI_Helper.fetchDogData()
-                print(results)
+                self.dogs = results.message.keys.map { Dog(name: $0) }
              //   print(allDog.message)
                 tableView.reloadData()
             }
@@ -46,22 +47,31 @@ class DogBreedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return dogs.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dog", for: indexPath)
+           let dog = dogs[indexPath.row]
+           cell.textLabel?.text = dog.name
         
-//        for dog in 0..<allDog!.message.count{
-//            //var dogName = Array(allDog!.message.keys)[dog]
-//            print(dog)
-//        }
-
-       // cell.textLabel?.text = 
-      //  cell.textLabel?.text = allDog.message
-        return cell
-    }
+        //fetch dogImage using dog name
+        let dogImageURL = URL(string: "https://dog.ceo/api/breed/\(dog.name.lowercased())/images/random")!
+            let task = URLSession.shared.dataTask(with: dogImageURL) { (data, response, error) in
+              if let data = data, let image = UIImage(data: data) {
+                // Update the image view on the main thread
+                DispatchQueue.main.async {
+                  cell.imageView?.image = image
+                  cell.setNeedsLayout()
+                }
+              }
+            }
+            task.resume()
+            
+            return cell
+          }
+        
     
 
     /*
