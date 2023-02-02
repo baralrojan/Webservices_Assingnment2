@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2D3926F298B36BF00C2B859 /* DogCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D3926E298B36BF00C2B859 /* DogCodable.swift */; };
+		C2D39271298B4AD000C2B859 /* DogBreedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D39270298B4AD000C2B859 /* DogBreedTableViewController.swift */; };
+		C2DA9978298A1A3900088791 /* DogAPI_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DA9977298A1A3900088791 /* DogAPI_Helper.swift */; };
 		DB9F870A2981F2D20038CA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F87092981F2D20038CA89 /* AppDelegate.swift */; };
 		DB9F870C2981F2D20038CA89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F870B2981F2D20038CA89 /* SceneDelegate.swift */; };
 		DB9F870E2981F2D20038CA89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F870D2981F2D20038CA89 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2D3926E298B36BF00C2B859 /* DogCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCodable.swift; sourceTree = "<group>"; };
+		C2D39270298B4AD000C2B859 /* DogBreedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedTableViewController.swift; sourceTree = "<group>"; };
+		C2DA9977298A1A3900088791 /* DogAPI_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI_Helper.swift; sourceTree = "<group>"; };
 		DB9F87062981F2D20038CA89 /* A2_WebServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_WebServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F87092981F2D20038CA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB9F870B2981F2D20038CA89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +65,13 @@
 				DB9F87092981F2D20038CA89 /* AppDelegate.swift */,
 				DB9F870B2981F2D20038CA89 /* SceneDelegate.swift */,
 				DB9F870D2981F2D20038CA89 /* ViewController.swift */,
+				C2D39270298B4AD000C2B859 /* DogBreedTableViewController.swift */,
 				DB9F870F2981F2D20038CA89 /* Main.storyboard */,
 				DB9F87122981F2D30038CA89 /* Assets.xcassets */,
 				DB9F87142981F2D30038CA89 /* LaunchScreen.storyboard */,
 				DB9F87172981F2D30038CA89 /* Info.plist */,
+				C2DA9977298A1A3900088791 /* DogAPI_Helper.swift */,
+				C2D3926E298B36BF00C2B859 /* DogCodable.swift */,
 			);
 			path = A2_WebServices;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9F870E2981F2D20038CA89 /* ViewController.swift in Sources */,
+				C2DA9978298A1A3900088791 /* DogAPI_Helper.swift in Sources */,
+				C2D3926F298B36BF00C2B859 /* DogCodable.swift in Sources */,
 				DB9F870A2981F2D20038CA89 /* AppDelegate.swift in Sources */,
 				DB9F870C2981F2D20038CA89 /* SceneDelegate.swift in Sources */,
+				C2D39271298B4AD000C2B859 /* DogBreedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
